@@ -226,7 +226,7 @@ async def get_past_reservations(user_id: int):
 @app.post("/feedback")
 async def submit_feedback(feedback: FeedbackRequest):
     try:
-        response = supabase.table("Feedback").insert({
+        supabase.table("Feedback").insert({
             "id_booking": feedback.id_booking,
             "id_property": feedback.id_property,
             "comments": feedback.comments,
