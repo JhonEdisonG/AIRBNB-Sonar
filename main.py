@@ -159,11 +159,11 @@ async def get_active_reservations(user_id: int):
             )
 
             if property_details.data:
-                property = property_details.data[0]
+                propert = property_details.data[0]
                 active_reservations.append({
                     "id": reservation["id"],
                     "property_id": reservation["property_id"],
-                    "property_name": property["name"],
+                    "property_name": propert["name"],
                     "in_time": reservation["in_time"],
                     "out_time": reservation["out_time"],
                     "status": reservation["status"]
